@@ -4,12 +4,15 @@ const Post = require('../models/Post');
 
 //get all POSTS
 router.get('/', async (req,res) =>{
+    console.log('get all posts');
+    
     try{
      const posts = await Post.find();
      res.json(posts); 
     }catch(err){
     res.json({message: err});
     }
+    
 });
 
 //get specific POST

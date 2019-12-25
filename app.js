@@ -26,6 +26,9 @@ app.get('/', (req,res)=>{
 
 
 //Connect to db
+
+
+//mongodb+srv://admin:123@cluster0-y3dz2.mongodb.net/test?retryWrites=true&w=majority
 mongoose.connect("mongodb+srv://admin:123@cluster0-xmznc.azure.mongodb.net/test?retryWrites=true&w=majority",
 {useNewUrlParser: true, useUnifiedTopology: true },() =>
 {
@@ -35,4 +38,4 @@ mongoose.connect("mongodb+srv://admin:123@cluster0-xmznc.azure.mongodb.net/test?
 
 //Start server
 //app.listen(3000);
-app.listen(process.env.PORT || 5000);
+app.listen(process.env.PORT || 3000);
