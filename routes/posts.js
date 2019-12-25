@@ -29,7 +29,7 @@ router.get('/:postId', async (req,res) =>{
 
 //submit a POST
 router.post('/', async (req,res) =>{
-    console.log('call post');
+    console.log('call add post');
     const post = new Post({
         title: req.body.title,
         description : req.body.description

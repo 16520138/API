@@ -1,15 +1,23 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+
 const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: true,
+}));
+
 require('dotenv/config');
 
 app.use(bodyParser.json());
 
 //import ROUTE
 const postsRoute = require('./routes/posts');
+const usersRoute = require('./routes/user');
 
 app.use('/posts', postsRoute);
+app.use('/users', usersRoute);
 
 //Middlewares
 
