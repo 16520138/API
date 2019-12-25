@@ -1,11 +1,15 @@
 const mongoose = require('mongoose');
 
 const PostSchema = mongoose.Schema({
+    email:{
+        type: String,
+        required: true,
+    },
     title: {
         type: String,
         required: true,
     },
-    description: {
+    image: {
         type: String,
         required: true,
     },

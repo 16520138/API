@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-    extended: true,
+    limit: "50mb", extended: true, parameterLimit: 50000,
 }));
 
 require('dotenv/config');
