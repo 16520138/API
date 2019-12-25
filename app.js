@@ -30,7 +30,7 @@ app.get('/', (req,res)=>{
 
 //mongodb+srv://admin:123@cluster0-y3dz2.mongodb.net/test?retryWrites=true&w=majority
 mongoose.connect("mongodb+srv://admin:123@cluster0-xmznc.azure.mongodb.net/test?retryWrites=true&w=majority",
-{useNewUrlParser: true, useUnifiedTopology: true },() =>
+{useNewUrlParser: true, useUnifiedTopology: true, ssl:true },() =>
 {
  console.log('Connect DB');
 });
