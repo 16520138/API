@@ -9,11 +9,31 @@ const Userchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    name :{
+    firstname :{
+        type: String,
+        required: true,
+    },
+    lastname :{
+        type: String,
+        required: true,
+    },
+    company :{
         type: String,
         required: false,
     },
-    address :{
+    jobtitle :{
+        type: String,
+        required: false,
+    },
+    phone :{
+        type: String,
+        required: false,
+    },
+    street :{
+        type: String,
+        required: false,
+    },
+    city :{
         type: String,
         required: false,
     },
@@ -21,6 +41,11 @@ const Userchema = mongoose.Schema({
         type: Number,
         required: false,
     },
+    avatar :{
+        type: String,
+        required: false,
+    },
+    
 });
 
 
